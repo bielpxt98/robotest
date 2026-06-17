@@ -1,4 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export default defineConfig({
   testDir: './tests',
@@ -10,6 +13,10 @@ export default defineConfig({
     baseURL: 'https://coletapurm23.streamlit.app',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
+    baseURL: process.env.SITE_URL ?? 'https://coletapurm23.streamlit.app',
+    trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    ...devices['Desktop Chrome'],
   },
   projects: [
     {

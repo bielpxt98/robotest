@@ -5,11 +5,13 @@
   "scripts": {
     "login-test": "playwright test tests/login.spec.ts",
     "test": "playwright test",
+    "login-test": "playwright test tests/login.spec.ts",
     "test:login": "playwright test tests/login.spec.ts"
   },
   "devDependencies": {
     "@playwright/test": "^1.54.0",
     "@types/node": "^22.15.0",
+    "dotenv": "^16.4.7",
     "typescript": "^5.8.3"
   }
 }

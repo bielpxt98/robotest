@@ -47,6 +47,13 @@ test('realiza login administrativo no Streamlit', async ({ page }) => {
 
   await modal.locator('input[type="password"]').fill(sitePassword);
   await modal.getByRole('button', { name: 'Entrar', exact: true }).click();
+  const modal = page.getByRole('dialog').filter({ hasText: 'Acesso administrativo' });
+  await expect(modal).toBeVisible();
+
+  await modal.locator('input[type="password"]').fill(sitePass);
+  await modal.getByRole('button', { name: 'Entrar', exact: true }).click();
+
+  await expect(modal).toBeHidden();
 
   await expect(modal).toBeHidden();
 });
