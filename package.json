@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "login-test": "playwright test tests/login.spec.ts",
     "test": "playwright test",
     "login-test": "playwright test tests/login.spec.ts",
     "test:login": "playwright test tests/login.spec.ts"
