@@ -1,0 +1,12 @@
+{
+  "name": "robotest",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "login-test": "playwright test tests/login.spec.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.0",
+    "typescript": "^5.8.3"
+  }
+}
