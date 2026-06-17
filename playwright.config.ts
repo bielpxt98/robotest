@@ -7,6 +7,11 @@ export default defineConfig({
     timeout: 15_000,
   },
   use: {
+    baseURL: 'https://coletapurm23.streamlit.app',
+    trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    ...devices['Desktop Chrome'],
+  },
     baseURL: process.env.SITE_URL ?? 'https://coletapurm23.streamlit.app',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
