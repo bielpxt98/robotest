@@ -10,11 +10,6 @@ export default defineConfig({
     baseURL: 'https://coletapurm23.streamlit.app',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    ...devices['Desktop Chrome'],
-  },
-    baseURL: process.env.SITE_URL ?? 'https://coletapurm23.streamlit.app',
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
   },
   projects: [
     {
